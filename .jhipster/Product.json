@@ -1,0 +1,22 @@
+{
+  "changelogDate": "20250108054244",
+  "fields": [
+    {
+      "fieldName": "prodId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "prodName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Product",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
