@@ -40,6 +40,8 @@ public class Customer implements Serializable {
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
+
+
     public String getId() {
         return this.id;
     }
