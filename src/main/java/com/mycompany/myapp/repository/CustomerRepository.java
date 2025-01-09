@@ -22,4 +22,5 @@ public interface CustomerRepository extends ReactiveMongoRepository<Customer, St
 
     @Query("{'id': ?0}")
     Mono<Customer> findOneWithEagerRelationships(String id);
+
 }

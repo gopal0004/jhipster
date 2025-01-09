@@ -97,6 +97,16 @@ export const CustomerUpdate = (props: RouteComponentProps<{ id: string }>) => {
                     ))
                   : null}
               </ValidatedField>
+              <ValidatedField id="customer-product" name="product" data-cy="product" label="Product" type="select">
+                <option value="" key="0" />
+                {products
+                  ? products.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/customer" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;

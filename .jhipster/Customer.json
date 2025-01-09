@@ -40,6 +40,12 @@
       "otherEntityName": "product",
       "relationshipName": "product",
       "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "product",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one"
     }
   ],
   "service": "no"

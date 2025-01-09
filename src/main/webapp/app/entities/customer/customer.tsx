@@ -53,6 +53,7 @@ export const Customer = (props: RouteComponentProps<{ url: string }>) => {
                 <th>Address</th>
                 <th>Order Date</th>
                 <th>Product</th>
+                <th>Product</th>
                 <th />
               </tr>
             </thead>
@@ -73,6 +74,7 @@ export const Customer = (props: RouteComponentProps<{ url: string }>) => {
                     {customer.orderDate ? <TextFormat type="date" value={customer.orderDate} format={APP_LOCAL_DATE_FORMAT} /> : null}
                   </td>
                   <td>{customer.product ? <Link to={`/product/${customer.product.id}`}>{customer.product.prod_id}</Link> : ''}</td>
+                  <td>{customer.product ? <Link to={`/product/${customer.product.id}`}>{customer.product.id}</Link> : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/customer/${customer.id}`} color="info" size="sm" data-cy="entityDetailsButton">

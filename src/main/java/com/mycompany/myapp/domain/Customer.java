@@ -32,15 +32,11 @@ public class Customer implements Serializable {
     @Field("address")
     private String address;
 
-    @Field("order_date")
-    private LocalDate orderDate;
 
     @Field("product")
     private Product product;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
-
-
 
     public String getId() {
         return this.id;
@@ -59,14 +55,15 @@ public class Customer implements Serializable {
         return this.custId;
     }
 
+    public void setCustId(Integer custId) {
+        this.custId = custId;
+    }
+
     public Customer custId(Integer custId) {
         this.setCustId(custId);
         return this;
     }
 
-    public void setCustId(Integer custId) {
-        this.custId = custId;
-    }
 
     public String getCustName() {
         return this.custName;
@@ -120,18 +117,7 @@ public class Customer implements Serializable {
         this.address = address;
     }
 
-    public LocalDate getOrderDate() {
-        return this.orderDate;
-    }
 
-    public Customer orderDate(LocalDate orderDate) {
-        this.setOrderDate(orderDate);
-        return this;
-    }
-
-    public void setOrderDate(LocalDate orderDate) {
-        this.orderDate = orderDate;
-    }
 
     public Product getProduct() {
         return this.product;
@@ -175,7 +161,6 @@ public class Customer implements Serializable {
             ", email='" + getEmail() + "'" +
             ", phoneNo='" + getPhoneNo() + "'" +
             ", address='" + getAddress() + "'" +
-            ", orderDate='" + getOrderDate() + "'" +
             "}";
     }
 }

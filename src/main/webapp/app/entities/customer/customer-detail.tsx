@@ -54,6 +54,8 @@ export const CustomerDetail = (props: RouteComponentProps<{ id: string }>) => {
           </dd>
           <dt>Product</dt>
           <dd>{customerEntity.product ? customerEntity.product.prod_id : ''}</dd>
+          <dt>Product</dt>
+          <dd>{customerEntity.product ? customerEntity.product.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/customer" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span>

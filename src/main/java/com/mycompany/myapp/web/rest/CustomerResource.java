@@ -159,10 +159,6 @@ public class CustomerResource {
                         if (customer.getAddress() != null) {
                             existingCustomer.setAddress(customer.getAddress());
                         }
-                        if (customer.getOrderDate() != null) {
-                            existingCustomer.setOrderDate(customer.getOrderDate());
-                        }
-
                         return existingCustomer;
                     })
                     .flatMap(customerRepository::save);
